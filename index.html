@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="title" content="Uberstrike | HaZard Server">
+    <meta name="description" content="Revived Uberstrike Project">
+    <meta name="keywords" content="Uberstrike">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <title>Uberstrike | HaZard Server</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+        integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+        integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Teko', sans-serif;
+            font-size: 20px;
+            letter-spacing: 1.5px;
+        }
+
+        .uber-background {
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url('/image/bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .full-section {
+            padding-top: 40vh;
+            color: white;
+            padding-bottom: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 500px) {
+            .full-section {
+                flex-direction: row;
+            }
+        }
+
+        .full-section .title {
+            font-size: 58px;
+            font-weight: 300;
+        }
+
+        .full-section .sub-title {
+            font-size: 38px;
+            font-weight: 300;
+        }
+
+        .hover-card {
+            transition-duration: .2s;
+        }
+
+        .hover-card:hover {
+            box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+            transform: scale(1.1);
+            z-index: 1;
+        }
+
+        .btn-linear {
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.65) 15%, rgba(0, 0, 0, 0.7) 25%, rgba(0, 0, 0, 0.75) 35%, rgba(0, 0, 0, 0.8) 55%, rgba(0, 0, 0, 0.85) 75%, rgba(0, 0, 0, 0.9) 100%);
+            color: white;
+        }
+
+        .btn-linear:hover {
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.9) 25%, rgba(0, 0, 0, 1) 55%);
+            color: white;
+        }
+
+        .text-section {
+            background: linear-gradient(90deg, rgba(255, 255, 255) 0%, rgba(230, 230, 230) 50%, rgba(210, 210, 210) 80%);
+            font-size: 28px;
+        }
+
+        .text-section h5 {
+            font-size: 36px;
+        }
+
+        .special-title {
+            border-left: 8px solid black;
+            padding-left: 8px;
+            border-radius: 8px;
+            padding-top: 5px;
+            padding-bottom: 2px;
+        }
+
+        hr.white {
+            border-bottom: 1px solid white;
+            opacity: 1;
+        }
+
+        .announce-section {
+            color: white;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.5) 80%), url('/image/bg2.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .announce-section .announce-card {
+            margin-bottom: 38px;
+            padding-bottom: 12px;
+            padding-left: 12px;
+            padding-right: 12px;
+            border-bottom: 2px solid white;
+        }
+
+        .announce-section .announce-card:last-child {
+            border-bottom: 0px;
+            margin-bottom: 0px;
+        }
+
+        .announce-section .announce-card h6 {
+            font-size: 22px;
+            text-transform: uppercase;
+        }
+
+        .announce-section .announce-card p {
+            font-weight: 400;
+        }
+
+        .announce-section .announce-card .date {
+            font-size: 14px;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="uber-background pb-5">
+        <div class="container full-section">
+            <h1 class="title">The Uberstrike Revive Project</h1>
+            <p class="sub-title">We are happy to announce that everyone can setup their own Uberstrike server from now
+                on!
+            </p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div data-aos="fade-up" data-aos-delay="300" class="card hover-card my-3">
+                        <div class="card-body">
+                            <h3 class="card-title">
+                                Download Game
+                            </h3>
+                            <p>Join us now!</p>
+                            <a href="#" class="btn btn-linear">
+                                Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div data-aos="fade-up" data-aos-delay="600" class="card hover-card my-3">
+                        <div class="card-body">
+                            <h3 class="card-title">
+                                Download Server Source
+                            </h3>
+                            <p>Join us now!</p>
+                            <a href="#" class="btn btn-linear">
+                                Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div data-aos="fade-up" data-aos-delay="900" class="card hover-card my-3">
+                        <div class="card-body">
+                            <h3 class="card-title">
+                                Join our Discord
+                            </h3>
+                            <p>Join us now!</p>
+                            <a href="#" class="btn btn-linear">
+                                Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-section py-5">
+        <div data-aos="flip-down" data-aos-delay="300" class="container">
+            <h5 class="title special-title">
+                Why we doing this?
+            </h5>
+            <p class="mt-3">Hahaha because of funny XD</p>
+        </div>
+    </div>
+    <div class="announce-section py-5">
+        <div class="container">
+            <div data-aos="fade-left" class="announce-card">
+                <h6>
+                    Sample Announcement Title
+                </h6>
+                <p class="date">Feb 4, 2023</p>
+                <p>Some sample announcement detail</p>
+            </div>
+            <div data-aos="fade-left" data-aos-delay="300" class="announce-card">
+                <h6>
+                    Sample Announcement Title
+                </h6>
+                <p class="date">Feb 4, 2023</p>
+                <p>Some sample announcement detail</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"
+    integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    AOS.init();
+</script>
+</html>
