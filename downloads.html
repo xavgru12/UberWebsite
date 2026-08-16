@@ -9,8 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
-    <title>UberStrike</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+    <title>Downloads &ndash; UberStrike</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -113,11 +113,12 @@
             background: var(--bg);
             color: var(--text);
             overflow-x: hidden;
+            min-height: 100vh;
         }
 
         .uber-background {
             position: relative;
-            background-image: linear-gradient(to right, rgba(2, 6, 14, 0.92), rgba(4, 10, 22, 0.75), rgba(2, 6, 14, 0.92)), url('./image/bg2.jpg');
+            background-image: linear-gradient(to right, rgba(2, 6, 14, 0.92), rgba(4, 10, 22, 0.75), rgba(2, 6, 14, 0.92)), url('image/bg2.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
@@ -159,81 +160,85 @@
             pointer-events: none;
         }
 
-        .uber-bar {
+        .page-wrap {
             position: relative;
             z-index: 1;
+            min-height: 100vh;
             display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 8px 28px;
-            margin: 16px 0;
-            padding: 26px 34px;
-            border-radius: 14px;
-            color: #fff;
-            background: rgba(9, 15, 27, 0.6);
-            border: 1px solid var(--card-border);
-            -webkit-backdrop-filter: blur(12px);
-            backdrop-filter: blur(12px);
-            transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+            flex-direction: column;
+            justify-content: center;
+            padding: 120px 0 100px;
         }
 
-        .uber-bar::before {
-            content: "";
-            position: absolute;
-            left: -1px;
-            top: 18px;
-            bottom: 10px;
-            width: 4px;
-            border-radius: 4px;
-            background: linear-gradient(180deg, var(--accent), var(--accent-2));
-            box-shadow: 0 0 14px rgba(0, 217, 255, 0.6);
+        .back-link {
+            display: inline-block;
+            margin-bottom: 32px;
+            color: var(--muted);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            font-size: 17px;
+            transition: color .2s ease, transform .2s ease;
         }
 
-        .uber-bar:hover {
-            border-color: rgba(0, 217, 255, 0.45);
-            box-shadow: 0 0 40px rgba(0, 217, 255, 0.12);
-            transform: translateY(-2px);
+        .back-link:hover {
+            color: var(--accent);
+            transform: translateX(-4px);
         }
 
-        .uber-bar h1,
-        .uber-bar h2 {
+        .downloads-title {
             font-family: 'Teko', sans-serif;
-            font-size: 44px;
+            font-size: 72px;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 2px;
             line-height: 1;
-            margin: 0;
             background: linear-gradient(90deg, #ffffff 0%, #bdf1ff 40%, #00d9ff 80%);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 0 20px rgba(0, 217, 255, 0.3));
+            filter: drop-shadow(0 0 24px rgba(0, 217, 255, 0.35));
         }
 
-        .uber-bar h1 {
-            font-size: 58px;
-        }
-
-        .uber-bar p {
-            margin: 0;
-            font-size: 21px;
+        .downloads-sub {
+            font-size: 24px;
             font-weight: 400;
             color: var(--muted);
-            flex: 1 1 320px;
-            min-width: 200px;
         }
 
-        .uber-bar .date {
-            font-size: 15px;
-            color: var(--muted);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
+        .steps {
+            display: grid;
+            gap: 22px;
+            margin-top: 40px;
+        }
+
+        .step-card .card-body {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            height: 100%;
+        }
+
+        .step-num {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Teko', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: #fff;
+            background: linear-gradient(100deg, #00a6d6 0%, #00d9ff 45%, #7c4dff 100%);
+            box-shadow: 0 6px 20px rgba(0, 217, 255, 0.35);
+            margin-bottom: 10px;
         }
 
         .hover-card {
             position: relative;
-            z-index: 1;
             background: var(--card-bg);
             border: 1px solid var(--card-border);
             border-radius: 18px;
@@ -247,7 +252,6 @@
             transform: translateY(-6px);
             border-color: rgba(0, 217, 255, 0.45);
             box-shadow: 0 18px 50px rgba(0, 0, 0, 0.55), 0 0 40px rgba(0, 217, 255, 0.12), inset 0 0 30px rgba(0, 217, 255, 0.04);
-            z-index: 2;
         }
 
         .hover-card .card-title {
@@ -306,6 +310,16 @@
             transform: translateY(0) scale(0.97);
         }
 
+        .btn-steam {
+            background: #1b2838;
+            box-shadow: 0 6px 24px rgba(27, 40, 56, 0.55);
+        }
+
+        .btn-steam:hover {
+            filter: brightness(1.3);
+            box-shadow: 0 10px 34px rgba(27, 40, 56, 0.8);
+        }
+
         .download-btn {
             animation: glowPulse 2.6s ease-in-out infinite;
         }
@@ -325,75 +339,29 @@
             transform: none !important;
         }
 
-        .uber-bar .date {
-            font-size: 15px;
+        .issue-link {
             color: var(--muted);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
+            font-size: 18px;
         }
 
-        .uber-bar {
-            margin: 0 0 40px;
+        .issue-link a {
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px dashed var(--accent);
+            transition: color .2s ease;
         }
 
-        .uber-bar.blog-entry {
-            margin-bottom: 14px;
-        }
-
-        .uber-bar:last-child {
-            margin-bottom: 0;
-        }
-
-        .home-bg {
-            padding-top: 110px;
-        }
-
-        .home-hero .uber-bar.uber-home {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 56px 40px;
-            margin-bottom: 48px;
-        }
-
-        .home-hero .uber-bar.uber-home::before {
-            display: none;
-        }
-
-        .home-hero .uber-bar.uber-home h1 {
-            font-size: 70px;
-        }
-
-        .home-hero .uber-bar.uber-home p {
-            flex: 0 1 auto;
-            max-width: 780px;
-            font-size: 24px;
+        .issue-link a:hover {
+            color: #fff;
         }
 
         @media (max-width: 768px) {
-            .home-bg {
-                padding-top: 84px;
+            .downloads-title {
+                font-size: 48px;
             }
-            .home-hero .uber-bar.uber-home {
-                padding: 40px 24px;
-            }
-            .home-hero .uber-bar.uber-home h1 {
-                font-size: 44px;
-            }
-            .home-hero .uber-bar.uber-home p {
-                font-size: 20px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .uber-bar {
-                padding: 20px 22px;
-            }
-            .uber-bar h1 {
-                font-size: 40px;
-            }
-            .uber-bar h2 {
-                font-size: 34px;
+            .downloads-sub {
+                font-size: 21px;
             }
         }
 
@@ -412,7 +380,7 @@
 <body>
     <nav class="navbar navbar-expand-lg uber-nav" aria-label="Main navigation">
         <div class="container">
-            <a class="navbar-brand uber-brand" href="#">UberStrike</a>
+            <a class="navbar-brand uber-brand" href="index.html">UberStrike</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#uberNav"
                 aria-controls="uberNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -420,68 +388,88 @@
             <div class="collapse navbar-collapse" id="uberNav">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="vision.html">Vision</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="downloads.html">Download</a>
+                        <a class="nav-link active" href="#download">Download</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="uber-background home-bg pb-5">
-        <div class="container home-hero">
-            <div data-aos="fade-up" id="home" class="uber-bar uber-home">
-                <h1>UberStrike will live forever</h1>
-                <p>True dedication to the game and its community. Looking to further develop UberStrike to use the
-                    latest technologies while keeping its original feeling alive.</p>
-                <a href="https://discord.gg/hhxZCBamRT" target="_blank" rel="noopener" class="btn btn-linear mt-3">
-                    Join our Discord
-                </a>
-                <a id="dl-main" href="downloads.html" class="btn btn-linear download-btn mt-3">
-                    Download
-                </a>
-                <a href="https://ko-fi.com/uberstrike" target="_blank" rel="noopener" class="btn btn-linear mt-3">
-                    Support on Ko-fi
-                </a>
-            </div>
-            <div class="uber-bar blog-entry">
-                <h2>Huge progress on version 4.3</h2>
-                <p class="date">August 07, 2026</p>
-                <p>The UberStrike mobile beta is coming, enabling
-                    us to gather player feedback and continuously improve the game experience ahead of the full
-                    release. Access will be granted for a one-time entry fee to everyone!</p>
-            </div>
-            <div class="uber-bar blog-entry">
-                <h2>This website launched!</h2>
-                <p class="date">August 19, 2023</p>
-                <p>Spread the website to everyone. Let's make sure it becomes visible in google.</p>
+    <div class="uber-background">
+        <div class="container page-wrap">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8">
+                    <a href="index.html" class="back-link">&larr; Back to homepage</a>
+<div data-aos="fade-up">
+                        <h1 class="downloads-title">Download UberStrike now!</h1>
+                        <p class="downloads-sub">Enjoy the game like in the old days!</p>
+                    </div>
+
+                    <div class="steps">
+                        <div data-aos="fade-up" class="card hover-card step-card">
+                            <div class="card-body">
+                                <div class="step-num">1</div>
+                                <h3 class="card-title">Get UberStrike on Steam</h3>
+                                <p>The patcher is applied to your Steam installation, so make sure you have the game
+                                    on Steam.</p>
+                                <a href="https://steamdb.info/app/291210/info" target="_blank"
+                                    rel="noopener" class="btn btn-linear btn-steam w-100">
+                                    UberStrike on Steam
+                                </a>
+                            </div>
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-delay="100" class="card hover-card step-card">
+                            <div class="card-body">
+                                <div class="step-num">2</div>
+                                <h3 class="card-title">Download the patcher</h3>
+                                <p>A one-time download only. Future updates are applied automatically at launch.</p>
+                                <a id="dl2-main" href="https://client-steam.uberstrike.com/patcher.zip" download
+                                    rel="noopener" class="btn btn-linear download-btn w-100">
+                                    Download
+                                </a>
+                                <p id="dl2-issues" class="issues-link text-center mt-3 mb-0 d-none">
+                                    Having issues downloading?
+                                    <a href="https://client-steam.uberstrike.com/patcher.zip" download rel="noopener">
+                                        Click here to trigger the download
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-delay="200" class="card hover-card step-card">
+                            <div class="card-body">
+                                <div class="step-num">3</div>
+                                <h3 class="card-title">Patch the Steam version</h3>
+                                <p class="mb-0">Run the patcher once on your UberStrike Steam installation. After that
+                                    you're ready to connect to our servers and enter Uber Space.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
     try {
         AOS.init();
     } catch (e) {}
-    (function () {
-        const links = document.querySelectorAll('.uber-nav .nav-link');
-        const sections = document.querySelectorAll('#home');
-        const spy = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    links.forEach((l) => l.classList.toggle('active', l.getAttribute('href') === '#' + entry.target.id || (entry.target.id === 'home' && l.getAttribute('href') === '#')));
-                }
-            });
-        }, { rootMargin: '-20% 0px -70% 0px' });
-        sections.forEach((s) => spy.observe(s));
+(function () {
+        const main = document.getElementById('dl2-main');
+        const issues = document.getElementById('dl2-issues');
+        main.addEventListener('click', function () {
+            setTimeout(function () {
+                issues.classList.remove('d-none');
+            }, 1500);
+        });
     })();
 </script>
 </html>
